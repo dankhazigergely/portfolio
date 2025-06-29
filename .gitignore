@@ -1,0 +1,28 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Backend specific ignores
+/backend/vendor/
+/backend/node_modules/
+/backend/public/storage
+/backend/storage/framework/
+/backend/storage/logs/
+/backend/.env
+
+# Frontend specific ignores
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
