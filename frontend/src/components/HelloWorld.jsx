@@ -4,9 +4,10 @@ function HelloWorld() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const apiUrl = import.meta.env.VITE_API_BASE_URL || process.env.VITE_API_BASE_URL;
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/hello') // Assuming backend runs on port 8000
+    fetch(`${apiUrl}/hello`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
