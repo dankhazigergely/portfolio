@@ -4,9 +4,11 @@ function HelloWorld() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiUrl = import.meta.env.VITE_API_BASE_URL || process.env.VITE_API_BASE_URL;
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
+    if (!apiUrl) return;
+
     fetch(`${apiUrl}/hello`)
       .then(response => {
         if (!response.ok) {
@@ -23,7 +25,7 @@ function HelloWorld() {
         setError(error.message);
         setLoading(false);
       });
-  }, []);
+  }, [apiUrl]);
 
   if (loading) {
     return <p>Loading...</p>;
