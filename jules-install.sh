@@ -1,7 +1,7 @@
 #!/usr/bin/bash 
 # install php
 sudo apt-get update;
-sudo apt-get install php php-xml php-dom php-mbstring php-curl php-zip -y;
+sudo apt-get install php php-xml php-dom php-mbstring php-curl php-zip php-sqlite3 -y;
 
 # install composer and dependencies
 cd backend;
