@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/api/hello', function () {
-    return response()->json(['message' => 'Boldog névnapot Péter!']);
+    return response()->json(['message' => 'Szia Nagyvilág!']);
 });
